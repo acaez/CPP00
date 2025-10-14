@@ -2,7 +2,7 @@ NAME = eyescontact
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS =
+SRCS = eyescontact.cpp
 
 OBJ = $(SRCS:.cpp=.o)
 
