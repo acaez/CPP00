@@ -8,7 +8,11 @@ int main()
     while (true)
     {
         std::cout << "Enter a command (ADD, SEARCH, EXIT): ";
-        std::getline(std::cin, command);
+        if (!std::getline(std::cin, command))
+        {
+            std::cout << std::endl << "ctrld vraiment" << std::endl;
+            break;
+        }
 
         if (command == "ADD")
             phonebook.addContact();

@@ -14,44 +14,56 @@ void Contact::setContact()
     char    c;
 
     std::cout << "first name: ";
-    std::getline(std::cin, firstName);
+    if (!std::getline(std::cin, firstName))
+        return;
     while (firstName.empty())
     {
         std::cout << "\033[1A\033[Kfirst name: ";
-        std::getline(std::cin, firstName);
+        if (!std::getline(std::cin, firstName))
+            return;
     }
     std::cout << "last name: ";
-    std::getline(std::cin, lastName);
+    if (!std::getline(std::cin, lastName))
+        return;
     while (lastName.empty())
     {
         std::cout << "\033[1A\033[Klast name: ";
-        std::getline(std::cin, lastName);
+        if (!std::getline(std::cin, lastName))
+            return;
     }
     std::cout << "nickname: ";
-    std::getline(std::cin, nickname);
+    if (!std::getline(std::cin, nickname))
+        return;
     while (nickname.empty())
     {
         std::cout << "\033[1A\033[Knickname: ";
-        std::getline(std::cin, nickname);
+        if (!std::getline(std::cin, nickname))
+            return;
     }
     std::cout << "phone number: ";
-    std::getline(std::cin, phoneNumber);
+    if (!std::getline(std::cin, phoneNumber))
+        return;
     while (phoneNumber.empty())
     {
         std::cout << "\033[1A\033[Kphone number: ";
-        std::getline(std::cin, phoneNumber);
+        if (!std::getline(std::cin, phoneNumber))
+            return;
     }
     std::cout << "darkest secret: ";
-    std::getline(std::cin, darkestSecret);
+    if (!std::getline(std::cin, darkestSecret))
+        return;
     while (darkestSecret.empty())
     {
         std::cout << "\033[1A\033[Kdarkest secret: ";
-        std::getline(std::cin, darkestSecret);
+        if (!std::getline(std::cin, darkestSecret))
+            return;
     }
 
     std::cout << "add contact (press ENTER): ";
     while ((c = std::cin.get()) != '\n')
     {
+        if (std::cin.eof())
+            return;
     }
     std::cout << "Contact added" << std::endl;
 }
@@ -130,12 +142,14 @@ void PhoneBook::searchContact()
     }
     std::string input;
     std::cout << "Enter index: ";
-    std::getline(std::cin, input);
+    if (!std::getline(std::cin, input))
+        return;
     
     while (input.empty() || input.length() != 1 || input[0] < '0' || input[0] > '7')
     {
         std::cout << "\033[1A\033[KEnter index: ";
-        std::getline(std::cin, input);
+        if (!std::getline(std::cin, input))
+            return;
     }    
     selectIndex = input[0] - '0';
     if (selectIndex >= 0 && selectIndex < total)
