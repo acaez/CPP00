@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <cctype>
 
 class Contact
 {
@@ -16,6 +17,7 @@ class Contact
 
     public:
         Contact();
+        ~Contact();
         void setContact();
         std::string getFirstName();
         std::string getLastName();
@@ -35,6 +37,7 @@ class PhoneBook
     
     public:
         PhoneBook();
+        ~PhoneBook();
         void addContact();
         void searchContact();
 };

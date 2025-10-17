@@ -9,6 +9,10 @@ Contact::Contact()
     darkestSecret = "";
 }
 
+Contact::~Contact()
+{
+}
+
 void Contact::setContact()
 {
     char    c;
@@ -48,6 +52,16 @@ void Contact::setContact()
         std::cout << "\033[1A\033[Kphone number: ";
         if (!std::getline(std::cin, phoneNumber))
             return;
+    }
+    for (size_t i = 0; i < phoneNumber.length(); i++)
+    {
+        if (phoneNumber[i] < '0' || phoneNumber[i] > '9')
+        {
+            std::cout << "Incorect input" << std::endl;
+            std::cout << "phone number: ";
+            if (!std::getline(std::cin, phoneNumber))
+                return;
+        }
     }
     std::cout << "darkest secret: ";
     if (!std::getline(std::cin, darkestSecret))
@@ -106,6 +120,10 @@ PhoneBook::PhoneBook()
 {
     index = 0;
     total = 0;
+}
+
+PhoneBook::~PhoneBook()
+{
 }
 
 std::string PhoneBook::format(std::string field)
