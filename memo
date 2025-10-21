@@ -1,0 +1,49 @@
+CLASSE : 
+Un "moule" qui définit un nouveau type de données avec ses propres variables (attributs) et fonctions (méthodes). 
+C'est un plan de construction pour créer des objets.
+
+PRIVATE :
+Un niveau d'accès qui rend les attributs ou méthodes accessibles uniquement à l'intérieur de la classe elle-même.
+Cela protège les données contre les modifications non contrôlées depuis l'extérieur.
+
+PUBLIC :
+Un niveau d'accès qui rend les attributs ou méthodes accessibles partout dans le programme,
+depuis n'importe quelle partie du code.
+
+OBJET :
+Une "instance" d'une classe. C'est une variable concrète créée à partir du moule de la classe. 
+Chaque objet a ses propres valeurs pour les attributs définis dans la classe.
+
+CONSTRUCTEUR :
+Une fonction spéciale qui s'exécute "automatiquement" quand on crée un objet.
+Elle sert à initialiser les attributs de l'objet avec des valeurs de départ.
+Le constructeur porte le même nom que la classe et n'a pas de type de retour.
+
+DESTRUCTEUR :
+Une fonction spéciale qui s'exécute "automatiquement" quand un objet est détruit.
+Elle sert à libérer la mémoire, fermer des fichiers, etc. 
+Le destructeur porte le même nom que la classe précédé du symbole ~.
+
+GETTER :
+Une fonction publique qui permet de lire et retourner la valeur d'un attribut privé.
+C'est le moyen contrôlé d'accéder aux données protégées d'une classe.
+
+SETTER :
+Une fonction publique qui permet de modifier la valeur d'un attribut privé.
+C'est le moyen contrôlé de changer les données protégées d'une classe, souvent avec des validations.
+
+HEADER (.hpp) :
+Un fichier qui contient les déclarations de la classe : la structure, les attributs et les signatures des méthodes.
+
+SOURCE (.cpp) :
+Un fichier qui contient les implémentations des méthodes : le code réel qui fait fonctionner les méthodes déclarées dans le header.
+
+STD:: :
+Le namespace (espace de noms) de la bibliothèque standard C++. 
+Il faut le préfixer devant les fonctions et types de la bibliothèque standard comme cout, cin, string, etc. 
+pour indiquer qu'ils viennent de cette bibliothèque.
+
+#include <iostream> : gère les entrées/sorties de base
+#include <string> : pour manipuler du texte (au lieu des char[] du C)
+#include <iomanip> : outils de formatage pour l'affichage
+#include <cctype> : pour manipuler les caractères individuels
