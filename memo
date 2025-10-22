@@ -39,7 +39,7 @@ SOURCE (.cpp) :
 Un fichier qui contient les implémentations des méthodes : le code réel qui fait fonctionner les méthodes déclarées dans le header.
 
 STD:: :
-Le namespace (espace de noms) de la bibliothèque standard C++. 
+Le namespace de la bibliothèque standard C++. 
 Il faut le préfixer devant les fonctions et types de la bibliothèque standard comme cout, cin, string, etc. 
 pour indiquer qu'ils viennent de cette bibliothèque.
 
