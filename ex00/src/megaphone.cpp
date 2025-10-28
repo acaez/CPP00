@@ -14,6 +14,8 @@ int main(int ac, char** av)
         std::string arg = av[i];
         for (size_t j = 0; j < arg.length(); j++)
             arg[j] = toupper(arg[j]);
+        std::cout << arg;
+        if (i < ac - 1)
         std::cout << arg << " ";
     }
     std::cout << std::endl;

@@ -1,10 +1,8 @@
-#ifndef EYESCONTACT_HPP
-#define EYESCONTACT_HPP
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
 
 #include <iostream>
 #include <string>
-#include <iomanip>
-#include <cctype>
 
 class Contact
 {
@@ -25,21 +23,6 @@ class Contact
         std::string getPhoneNumber();
         std::string getDarkestSecret();
         void displayContact();
-};
-
-class PhoneBook
-{
-    private:
-        Contact contact[8];
-        int     index;
-        int     total;
-        std::string format(std::string field);
-    
-    public:
-        PhoneBook();
-        ~PhoneBook();
-        void addContact();
-        void searchContact();
 };
 
 #endif

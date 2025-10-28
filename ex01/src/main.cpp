@@ -1,4 +1,4 @@
-#include "eyescontact.hpp"
+#include "PhoneBook.hpp"
 
 int main() 
 {
@@ -9,10 +9,7 @@ int main()
     {
         std::cout << "Enter a command (ADD, SEARCH, EXIT): ";
         if (!std::getline(std::cin, command))
-        {
-            std::cout << std::endl << "ctrld vraiment" << std::endl;
             break;
-        }
 
         if (command == "ADD")
             phonebook.addContact();

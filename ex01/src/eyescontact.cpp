@@ -1,4 +1,6 @@
-#include "eyescontact.hpp"
+#include "PhoneBook.hpp"
+#include <iomanip>
+#include <cctype>
 
 Contact::Contact()
 {
@@ -57,7 +59,7 @@ void Contact::setContact()
     {
         if (phoneNumber[i] < '0' || phoneNumber[i] > '9')
         {
-            std::cout << "Incorect input" << std::endl;
+            std::cout << "Incorrect input" << std::endl;
             std::cout << "phone number: ";
             if (!std::getline(std::cin, phoneNumber))
                 return;
